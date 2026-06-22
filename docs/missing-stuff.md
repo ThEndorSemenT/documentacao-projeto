@@ -1,0 +1,4 @@
+- ip bricks
+- nuvem .. varias opcoes opensource foram testadas, mas resolveu-se instalar o Synology DRive numa maquina fisica mantida por nós
+- banco do tempo - Amiar criou regulamento (entregavel) e testámos cyclos e contactamos outras empresas e cooperativas que usam banco do tempo em espanha e america do sul ...
+- teamplate

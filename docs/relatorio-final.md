@@ -48,6 +48,7 @@ Ver `docs/subprojects/` para detalhe de cada um.
 | Nome | Função | Valor Contrato |
 |---|---|---|
 | Nuno Costa | Técnico Desenvolvimento Software | 11.250 EUR |
+| Tiago Quintans | Gestor de Projeto | 11.250 EUR |
 | [Outros] | ... | ... |
 
 ---

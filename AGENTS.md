@@ -34,9 +34,8 @@ This is a **document and asset repository** for ThEndorSemenT (Thendor), the Web
 
 - **30.000 EUR** — Voucher Startup PRR (Aviso n.º 21/C16-i02/2025)
 - **Período:** 15/02/2026 — 30/06/2026 (5 meses)
-- **Contrato Nuno Costa:** 11.250 EUR (já transferido) — `voucher/Contrato_NunoCosta_FINAL (1).docx`
 - **Projeto:** plataforma digital de registo, validação e rastreabilidade de ativos digitais (blockchain ICP)
-- **Equipa:** Tiago Quintans (PM), Nuno Costa (dev), Nuno Amiar (COO/mkt), Carlos Afonso (smart contracts)
+- **Equipa:** Tiago Quintans (PM), Nuno Costa (dev), Nuno Amiar (COO/mkt), Carlos Afonso (smart contracts, devops)
 - **Designers** referidos genericamente nas atas (não nomear individualmente)
 
 ## Sub-projetos

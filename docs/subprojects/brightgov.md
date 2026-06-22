@@ -5,7 +5,7 @@
 
 ## Descrição
 
-Plataforma de governação digital / participação cívica. Integra processos de decisão coletiva com tecnologia blockchain para garantir transparência e imutabilidade.
+Sistema de votação online auditáveis de ponta-a-ponta. Plataforma de governação digital / participação cívica. Integra processos de decisão coletiva com tecnologia blockchain para garantir transparência e imutabilidade.
 
 ## Estado
 
