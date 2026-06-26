@@ -41,6 +41,21 @@ Formato de registo cronológico. Cada entrada representa uma reunião, decisão,
 
 ---
 
+### 2026-02-26 — Aprovisionamento IPBRICKS (TestBed DevSecPaaS)
+
+**Participantes:** Técnico Desenvolvimento
+**Tópicos:**
+- Acesso gratuito à plataforma IPBRICKS TestBed até Junho 2026
+- VM provisionada: 4vCPUs, 16GB RAM, 500GB disco c/ backup, IPBRICK.DevOps
+- Domínio: `umaboaquestao.ucoip.pt` com DNS e SSL configurados
+- NextCloud pré-instalado — candidato para migração do Google Drive (sunsetting)
+- Avaliação da viabilidade dos servidores para os projetos Thendor
+**Decisões:**
+- Explorar IPBRICKS como possível infraestrutura para os sub-projetos
+- Testar NextCloud para substituição do Google Drive
+
+---
+
 ## Março 2026
 
 ### 2026-03-01 — Reunião de Equipa
@@ -80,9 +95,23 @@ Formato de registo cronológico. Cada entrada representa uma reunião, decisão,
 - Estado dos entregáveis
 - BrightGov: definição do âmbito e funcionalidades core
 - Escryptorium: procura de espaço físico
+- **IPBRICKS:** concluída a avaliação — plataforma estável mas custos pós-trial (pós-junho 2026) são proibitivos
 **Decisões:**
 - BrightGov avança como prioridade do COO
 - Pesquisa de espaços para Escryptorium na área de Lisboa
+- **Não avançar com IPBRICKS** após o período TestBed; explorar alternativas de alojamento
+
+---
+
+### 2026-03-25 — Exploração de Alternativas de Infraestrutura
+
+**Participantes:** Técnico Desenvolvimento
+**Tópicos:**
+- Instalação de template ownCloud.com no servidor Railway (teste)
+- Exploração do Huddle01 Cloud (sem utilização efetiva)
+**Decisões:**
+- ownCloud no Railway não é solução de longo prazo para a equipa
+- Huddle01 fica em standby
 
 ---
 
@@ -97,7 +126,7 @@ Formato de registo cronológico. Cada entrada representa uma reunião, decisão,
 - Mockups Corrupted Pigs: primeira versão apresentada pelos designers
 - Non-Fungible Balcony: conceito inicial
 **Decisões:**
--Refinar mockups Corrupted Pigs com feedback do COO
+- Refinar mockups Corrupted Pigs com feedback do COO
 - Iniciar desenvolvimento de APIs de integração
 
 ---
@@ -113,6 +142,19 @@ Formato de registo cronológico. Cada entrada representa uma reunião, decisão,
 **Decisões:**
 - BrightGov.tech como plataforma de participação cívica descentralizada
 - Próximo passo: protótipo funcional
+
+---
+
+### 2026-04-19 — Instalação de Servidor Synology NAS
+
+**Participantes:** Técnico Desenvolvimento, Eng. Smart Contracts (Carlos Afonso / Impulsys)
+**Tópicos:**
+- Instalação de servidor próprio com Synology NAS na sede da UBQ
+- Parceria com Impulsys (https://impulsys.pt) do Carlos Afonso
+- Objetivo: alojamento próprio, substituição definitiva do Google Drive
+**Decisões:**
+- Synology NAS como infraestrutura primária de armazenamento e alojamento
+- Fim da avaliação de soluções externas (IPBRICKS, ownCloud, Huddle01)
 
 ---
 
