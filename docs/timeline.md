@@ -263,6 +263,29 @@ Formato de registo cronológico. Cada entrada representa uma reunião, decisão,
 
 ---
 
+## Agosto 2026
+
+### 2026-08-20 — Notificação de arranque do projeto UBQ Store
+
+**Participantes:** Técnico Desenvolvimento, Project Manager (Tiago Quintans)
+**Duração:** Comunicação escrita (email)
+**Tópicos:**
+- Comunicação formal do arranque do projeto **UBQ Store** — plataforma de e-commerce multi-tenant para a cooperativa
+- Classificação do projeto como **SaaS (Software as a Service)**: plataforma que pode ser usada pela UBQ, Rodinha e potencialmente vendida a terceiros com subscrição mensal ou pay-as-you-go
+- Funcionalidades planeadas: gestão de produtos/catálogo, pagamentos modulares (multi-gateway), painel admin backoffice, personalização visual por tenant (cores, logo)
+- Questões pendentes: centro de custos (ThEndorsement vs. cooperativa), orçamento para infraestrutura/servidores, requisitos de shipping/envio
+**Decisões:**
+- Arquitetura técnica definida (Rails 8, PostgreSQL, ViewComponent, Devise, Administrate)
+- Email de esclarecimento enviado ao Presidente da cooperativa
+- Aguardar resposta sobre centro de custos e orçamento antes de avançar para produção
+**Pendências:**
+- Definir centro de custos (ThEndorsement ou cooperativa)
+- Definir orçamento para infraestrutura cloud
+- Confirmar requisitos de shipping, envio internacional e integrações com serviços de terceiros (CTT, DHL, etc.)
+- Confirmar se há requisitos não listados no email enviado
+
+---
+
 ## Instruções de processamento
 
 Para gerar atas formais em DOCX/PDF a partir deste ficheiro:

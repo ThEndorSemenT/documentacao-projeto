@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ThEndorSemenT — Pitch</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css" />
+  <style>
+    :root {
+      --accent: #7c4dff;
+      --accent-light: #b39dff;
+      --dim: #9d97b8;
+    }
+
+    .reveal {
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+
+    .reveal .slides section {
+      text-align: left;
+    }
+
+    /* Slide: capa */
+    .slide-cover {
+      display: flex !important;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+    }
+
+    .slide-cover .eyebrow {
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent-light);
+      margin-bottom: 1rem;
+    }
+
+    .slide-cover h1 {
+      font-size: 3.8rem !important;
+      font-weight: 900;
+      line-height: 1.1;
+      color: #fff;
+      margin: 0 0 1.2rem;
+      text-transform: none !important;
+    }
+
+    .slide-cover h1 .accent {
+      color: var(--accent);
+    }
+
+    .slide-cover .tagline {
+      font-size: 1.35rem;
+      color: var(--dim);
+      line-height: 1.6;
+      max-width: 700px;
+      font-weight: 300;
+    }
+
+    /* Slide genérico */
+    .reveal h2 {
+      font-size: 2rem !important;
+      font-weight: 800;
+      color: #fff;
+      text-transform: none !important;
+      margin-bottom: 1rem;
+    }
+
+    .reveal h2 .accent {
+      color: var(--accent);
+    }
+
+    .reveal p {
+      font-size: 1.1rem;
+      color: #c4bedd;
+      line-height: 1.75;
+    }
+
+    /* Label secção */
+    .label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    /* Cards de projetos */
+    .project-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .card {
+      background: rgba(124, 77, 255, 0.08);
+      border: 1px solid rgba(124, 77, 255, 0.3);
+      border-radius: 10px;
+      padding: 1.1rem 1.3rem;
+    }
+
+    .card strong {
+      color: #fff;
+      font-size: 1rem;
+      display: block;
+      margin-bottom: 0.4rem;
+    }
+
+    .card p {
+      font-size: 0.88rem !important;
+      color: var(--dim) !important;
+      margin: 0;
+      line-height: 1.55;
+    }
+
+    /* Highlight block */
+    .highlight-block {
+      background: rgba(124, 77, 255, 0.08);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      padding: 1.4rem 1.6rem;
+      margin-top: 1.5rem;
+    }
+
+    .highlight-block p {
+      margin: 0;
+      font-size: 1.05rem !important;
+      color: #c4bedd !important;
+    }
+
+    .highlight-block em {
+      color: #fff;
+      font-style: normal;
+      font-weight: 600;
+    }
+
+    /* Slide final / CTA */
+    .slide-cta {
+      text-align: center;
+    }
+
+    .slide-cta h2 {
+      text-align: center;
+      font-size: 2.4rem !important;
+    }
+
+    .slide-cta .sub {
+      font-size: 1.15rem;
+      color: var(--dim);
+      margin-bottom: 2rem;
+    }
+
+    .contacts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+      margin-top: 1.5rem;
+    }
+
+    .contacts a {
+      color: var(--dim);
+      text-decoration: none;
+      font-size: 0.9rem;
+      border: 1px solid rgba(124, 77, 255, 0.35);
+      padding: 0.45rem 1rem;
+      border-radius: 20px;
+      transition: all 0.2s;
+    }
+
+    /* Stack list */
+    .stack-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 1.2rem;
+    }
+
+    .stack-list span {
+      background: rgba(124, 77, 255, 0.12);
+      border: 1px solid rgba(124, 77, 255, 0.3);
+      color: var(--accent-light);
+      font-size: 0.85rem;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+    }
+  </style>
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+
+    <!-- 1. Capa -->
+    <section class="slide-cover">
+      <div class="eyebrow">Uma Boa Questão · Braço Digital</div>
+      <h1>Th<span class="accent">Endor</span>SemenT</h1>
+      <p class="tagline">
+        E se uma boa ideia não precisasse de continuar apenas numa ideia?
+      </p>
+    </section>
+
+    <!-- 2. Quem somos -->
+    <section>
+      <span class="label">Quem somos</span>
+      <h2>Não vendemos consultoria.<br><span class="accent">Construímos coisas.</span></h2>
+      <p>
+        Somos o braço digital da cooperativa <strong style="color:#fff">Uma Boa Questão</strong> —
+        uma equipa de engenheiros, construtores de comunidade e especialistas em Web3
+        que transforma desafios reais em soluções concretas.
+      </p>
+      <div class="highlight-block">
+        <p>
+          Juntamos <em>quem tem um problema</em>, <em>quem tem conhecimento</em>
+          e <em>quem tem capacidade para o resolver</em> — e fazemos isso acontecer.
+        </p>
+      </div>
+    </section>
+
+    <!-- 3. O que construímos -->
+    <section>
+      <span class="label">O que construímos</span>
+      <h2>Quatro projetos. <span class="accent">Uma rede.</span></h2>
+      <div class="project-grid">
+        <div class="card">
+          <strong>BrightGov</strong>
+          <p>Votações online auditáveis de ponta a ponta, para autarquias e organizações que querem decisões coletivas com prova criptográfica.</p>
+        </div>
+        <div class="card">
+          <strong>Corrupted Pigs</strong>
+          <p>Jogo blockchain com coleção NFT própria, onde a propriedade digital é nativa — não cosmética.</p>
+        </div>
+        <div class="card">
+          <strong>Balcão NFT</strong>
+          <p>Ponto de contacto ambulante para artistas, cooperativas e marcas que querem entrar na economia digital sem se perderem no jargão.</p>
+        </div>
+        <div class="card">
+          <strong>Escryptorium</strong>
+          <p>Espaço físico de coworking para a comunidade Web3 crescer com chão sob os pés.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Princípio -->
+    <section>
+      <span class="label">O que nos distingue</span>
+      <h2>Transparência <span class="accent">radical.</span></h2>
+      <p>
+        Cada projeto que incubamos segue o mesmo princípio: o código é auditável,
+        as decisões são rastreáveis, o dinheiro tem destino verificável.
+      </p>
+      <div class="highlight-block">
+        <p>
+          Escolhemos a ferramenta <em>em função do problema</em> — nunca o contrário.
+        </p>
+      </div>
+      <div class="stack-list">
+        <span>Blockchain ICP</span>
+        <span>Solana</span>
+        <span>Smart Contracts</span>
+        <span>Web3</span>
+        <span>Plataformas digitais</span>
+        <span>Software à medida</span>
+      </div>
+    </section>
+
+    <!-- 5. CTA -->
+    <section class="slide-cta">
+      <span class="label" style="text-align:center; display:block;">Fala connosco</span>
+      <h2>Onde as boas ideias<br><span class="accent">encontram quem as concretiza.</span></h2>
+      <p class="sub">
+        Se tens uma ideia, um projeto, uma comunidade<br>ou um desafio que ainda não encontrou quem o resolva —
+      </p>
+      <div class="contacts">
+        <a href="mailto:contact@thendorsement.com">contact@thendorsement.com</a>
+        <a href="tel:+351919022909">+351 919 022 909</a>
+        <a href="https://thendorsement.com" target="_blank">thendorsement.com</a>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+<script>
+  Reveal.initialize({
+    hash: true,
+    transition: 'fade',
+    transitionSpeed: 'fast',
+    controls: true,
+    progress: true,
+    slideNumber: true,
+    keyboard: true,
+    overview: true,
+    center: false,
+  });
+</script>
+</body>
+</html>
