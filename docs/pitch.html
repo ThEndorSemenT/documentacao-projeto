@@ -189,6 +189,30 @@
       padding: 0.3rem 0.8rem;
       border-radius: 20px;
     }
+
+    .card .price {
+      margin-top: 0.6rem;
+      color: var(--accent-light);
+      font-size: 0.85rem !important;
+    }
+
+    .card .price strong {
+      color: #fff;
+    }
+
+    .new-badge {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      margin-left: 0.5rem;
+      vertical-align: middle;
+    }
   </style>
 </head>
 <body>
@@ -242,7 +266,35 @@
       </div>
     </section>
 
-    <!-- 4. Princípio -->
+    <!-- 4. Serviços -->
+    <section>
+      <span class="label">Serviços</span>
+      <h2>O que fazemos <span class="accent">para ti.</span></h2>
+      <div class="project-grid">
+        <div class="card">
+          <strong>Consultoria Web3 &amp; Smart Contracts</strong>
+          <p>Desenvolvimento de smart contracts, auditoria, integração blockchain e consultoria técnica para projetos DeFi, NFTs e tokenização de ativos reais.</p>
+          <p class="price">desde <strong>€55/hora</strong></p>
+        </div>
+        <div class="card">
+          <strong>E-commerce para PME &amp; Cooperativas</strong>
+          <p>Plataforma de loja online completa — pagamentos, inventário, envios, analytics. Sem taxas de transação por plataforma, sem middlemen.</p>
+          <p class="price"><strong>€19/mês</strong> sem comissões por venda</p>
+        </div>
+        <div class="card" style="grid-column: 1 / -1;">
+          <strong>LaunchBot <span class="new-badge">Novo</span></strong>
+          <p>
+            Engenharia com IA para startups e empresas que precisam de prototipar rápido ou escalar equipa.
+            Do conceito ao MVP funcional em dias, não em meses.
+          </p>
+          <p class="price">
+            <strong>€1.800/mês</strong> por engenheiro dedicado · <strong>€400/dia</strong> por sprint de projeto
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Princípio -->
     <section>
       <span class="label">O que nos distingue</span>
       <h2>Transparência <span class="accent">radical.</span></h2>
@@ -270,7 +322,7 @@
       </div>
     </section>
 
-    <!-- 5. CTA -->
+    <!-- 6. CTA -->
     <section class="slide-cta">
       <span class="label" style="text-align:center; display:block;">Fala connosco</span>
       <h2>Onde as boas ideias<br><span class="accent">encontram quem as concretiza.</span></h2>

@@ -19,6 +19,12 @@ O fio condutor? Transparência radical. Cada projeto que incubamos ou desenvolve
 - **Finanças verificáveis** — o dinheiro tem destino auditável, da cooperative ao Endosso.
 - **Ferramenta certa, problema certo** — ICP, Solana, smart contracts, software à medida — escolhemos a stack em função do que o projeto precisa.
 
+Além dos projetos próprios, oferecemos serviços com preços acessíveis:
+
+- **Consultoria Web3 & Smart Contracts** — desenvolvimento de smart contracts, auditoria, integração blockchain e consultoria técnica. Desde €55/hora.
+- **E-commerce para PME & Cooperativas** — loja online completa sem taxas de transação por plataforma. €19/mês, sem comissões por venda.
+- **LaunchBot** — engenharia com IA para startups e empresas que precisam de prototipar rápido. Do conceito ao MVP em dias. €1.800/mês por engenheiro dedicado ou €400/dia por sprint.
+
 Se tens uma ideia, um projeto, uma comunidade ou um desafio que ainda não encontrou quem o resolva — fala connosco.
 
 **ThEndorSemenT. Onde as boas ideias encontram quem as concretiza.**
