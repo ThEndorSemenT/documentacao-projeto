@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ThEndorSemenT — Pitch Enertech</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css" />
+  <style>
+    :root {
+      --accent: #7c4dff;
+      --accent-light: #b39dff;
+      --dim: #9d97b8;
+    }
+
+    .reveal {
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+
+    .reveal .slides section {
+      text-align: left;
+    }
+
+    /* ── Slide capa ── */
+    .slide-cover {
+      display: flex !important;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      height: 100%;
+    }
+
+    .slide-cover .eyebrow {
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent-light);
+      margin-bottom: 1rem;
+    }
+
+    .slide-cover h1 {
+      font-size: 3.8rem !important;
+      font-weight: 900;
+      line-height: 1.1;
+      color: #fff;
+      margin: 0 0 1.2rem;
+      text-transform: none !important;
+    }
+
+    .slide-cover h1 .accent { color: var(--accent); }
+
+    .slide-cover .tagline {
+      font-size: 1.35rem;
+      color: var(--dim);
+      line-height: 1.6;
+      max-width: 700px;
+      font-weight: 300;
+    }
+
+    /* logos centrados na capa */
+    .cover-logos {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      align-items: center;
+      margin-top: 2.5rem;
+      width: 100%;
+    }
+
+    .cover-logos img { max-height: 52px; }
+
+    /* ── Slide genérico ── */
+    .reveal h2 {
+      font-size: 2rem !important;
+      font-weight: 800;
+      color: #fff;
+      text-transform: none !important;
+      margin-bottom: 1rem;
+    }
+
+    .reveal h2 .accent { color: var(--accent); }
+
+    .reveal p {
+      font-size: 1.05rem;
+      color: #c4bedd;
+      line-height: 1.75;
+    }
+
+    /* label de secção */
+    .label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    /* ── Cards ── */
+    .project-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1.2rem;
+    }
+
+    .card {
+      background: rgba(124, 77, 255, 0.08);
+      border: 1px solid rgba(124, 77, 255, 0.3);
+      border-radius: 10px;
+      padding: 1rem 1.2rem;
+    }
+
+    .card strong {
+      color: #fff;
+      font-size: 1rem;
+      display: block;
+      margin-bottom: 0.35rem;
+    }
+
+    .card p {
+      font-size: 0.85rem !important;
+      color: var(--dim) !important;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .card .price {
+      margin-top: 0.5rem;
+      color: var(--accent-light);
+      font-size: 0.82rem !important;
+    }
+
+    .card .price strong { color: #fff; display: inline; }
+
+    /* ── Highlight ── */
+    .highlight-block {
+      background: rgba(124, 77, 255, 0.08);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      padding: 1.2rem 1.5rem;
+      margin-top: 1.2rem;
+    }
+
+    .highlight-block p {
+      margin: 0;
+      font-size: 1rem !important;
+      color: #c4bedd !important;
+    }
+
+    .highlight-block em {
+      color: #fff;
+      font-style: normal;
+      font-weight: 600;
+    }
+
+    /* ── Slide CTA ── */
+    .slide-cta { text-align: center; }
+
+    .slide-cta h2 {
+      text-align: center;
+      font-size: 2.2rem !important;
+    }
+
+    .slide-cta .sub {
+      font-size: 1.1rem;
+      color: var(--dim);
+      margin-bottom: 1.5rem;
+    }
+
+    .contacts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+      margin-top: 1.2rem;
+    }
+
+    .contacts a {
+      color: var(--dim);
+      text-decoration: none;
+      font-size: 0.9rem;
+      border: 1px solid rgba(124, 77, 255, 0.35);
+      padding: 0.45rem 1rem;
+      border-radius: 20px;
+    }
+
+    /* ── New badge ── */
+    .new-badge {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      margin-left: 0.4rem;
+      vertical-align: middle;
+    }
+
+    /* ── Footer com logos (canto inferior direito em todos os slides exceto capa) ── */
+    .slide-logos {
+      position: fixed;
+      bottom: 14px;
+      right: 3em;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      pointer-events: none;
+      z-index: 100;
+    }
+
+    .slide-logos img { max-height: 36px; opacity: 0.85; }
+  </style>
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+
+    <!-- 1. Capa -->
+    <section class="slide-cover">
+      <div class="eyebrow">Uma Boa Questão · Braço Digital</div>
+      <h1>Th<span class="accent">Endor</span>SemenT</h1>
+      <p class="tagline">
+        E se uma boa ideia não precisasse de continuar apenas numa ideia?
+      </p>
+      <div class="cover-logos">
+        <img src="https://enertech.pt/wp-content/uploads/sites/32/2021/10/cropped-enertech-home-slide1-300x300.jpg" alt="Enertech" />
+        <img src="https://portugal2030.pt/wp-content/uploads/sites/3/2022/12/pt2030_cofinanciamento.png" alt="Portugal 2030" />
+      </div>
+    </section>
+
+    <!-- 2. Quem somos -->
+    <section>
+      <span class="label">Quem somos</span>
+      <h2>Consultoria técnica.<br><span class="accent">Projetos próprios.</span></h2>
+      <p>
+        Somos o braço digital da cooperativa <strong style="color:#fff">Uma Boa Questão</strong> —
+        uma equipa de engenheiros, construtores de comunidade e especialistas em Web3.
+      </p>
+      <p style="margin-top: 0.8rem;">
+        Ajudamos outras organizações a navegar a transição digital e Web3,
+        e ao mesmo tempo construímos os nossos próprios produtos — porque a melhor forma de provar que algo funciona é fazê-lo funcionar.
+      </p>
+    </section>
+
+    <!-- 3. O que construímos -->
+    <section>
+      <span class="label">Projetos próprios</span>
+      <h2>Construímos o que <span class="accent">pregamos.</span></h2>
+      <div class="project-grid">
+        <div class="card">
+          <strong>BrightGov</strong>
+          <p>Votações online auditáveis de ponta a ponta, para autarquias e organizações que querem decisões coletivas com prova criptográfica.</p>
+        </div>
+        <div class="card">
+          <strong>Corrupted Pigs</strong>
+          <p>Jogo blockchain com coleção NFT própria, onde a propriedade digital é nativa — não cosmética.</p>
+        </div>
+        <div class="card">
+          <strong>Balcão NFT</strong>
+          <p>Ponto de contacto ambulante para artistas, cooperativas e marcas que querem entrar na economia digital sem se perderem no jargão.</p>
+        </div>
+        <div class="card">
+          <strong>Escryptorium</strong>
+          <p>Espaço físico de coworking para a comunidade Web3 crescer com chão sob os pés.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Serviços -->
+    <section>
+      <span class="label">Serviços</span>
+      <h2>O que fazemos <span class="accent">para ti.</span></h2>
+      <div class="project-grid">
+        <div class="card">
+          <strong>Consultoria Web3 &amp; Smart Contracts</strong>
+          <p>Desenvolvimento de smart contracts, auditoria, integração blockchain e consultoria técnica para projetos DeFi, NFTs e tokenização de ativos reais.</p>
+          <p class="price">desde <strong>€55/hora</strong></p>
+        </div>
+        <div class="card">
+          <strong>E-commerce para PME &amp; Cooperativas</strong>
+          <p>Plataforma de loja online completa — pagamentos, inventário, envios, analytics. Sem taxas de transação por plataforma, sem middlemen.</p>
+          <p class="price"><strong>€19/mês</strong> sem comissões por venda</p>
+        </div>
+        <div class="card" style="grid-column: 1 / -1;">
+          <strong>LaunchBot <span class="new-badge">Novo</span></strong>
+          <p>
+            Engenharia com IA para startups e empresas que precisam de prototipar rápido ou escalar equipa.
+            Do conceito ao MVP funcional em dias, não em meses.
+          </p>
+          <p class="price">
+            <strong>€1.800/mês</strong> por engenheiro dedicado · <strong>€400/dia</strong> por sprint de projeto
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Princípio -->
+    <section>
+      <span class="label">O que nos distingue</span>
+      <h2>Transparência <span class="accent">radical.</span></h2>
+      <p>
+        Cada projeto que incubamos ou desenvolvemos segue o mesmo princípio:
+        o código é auditável, as decisões são rastreáveis, o dinheiro tem destino verificável.
+      </p>
+      <div class="project-grid" style="margin-top: 1rem;">
+        <div class="card">
+          <strong>Open source por defeito</strong>
+          <p>Publicamos o código. Qualquer pessoa pode auditar, contribuir ou fazer fork.</p>
+        </div>
+        <div class="card">
+          <strong>Decisões rastreáveis</strong>
+          <p>Cada decisão deixa registo. Sem backrooms, sem "confia em mim".</p>
+        </div>
+        <div class="card">
+          <strong>Finanças verificáveis</strong>
+          <p>O dinheiro tem destino auditável, da cooperativa ao Endosso.</p>
+        </div>
+        <div class="card">
+          <strong>Ferramenta certa, problema certo</strong>
+          <p>ICP, Solana, smart contracts, software à medida — escolhemos a stack em função do que o projeto precisa.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. DePIN & SolarCoin -->
+    <section>
+      <span class="label">Ecossistemas — DePIN &amp; Carbon Credits</span>
+      <h2>SolarCoin dentro de <span class="accent">DePIN</span></h2>
+      <p>
+        SolarCoin é um token blockchain que recompensa a produção de energia solar.
+        Encaixa-se no modelo DePIN (Decentralized Physical Infrastructure Networks)
+        ao descentralizar a gestão e distribuição de créditos de energia —
+        permitindo verificação direta e transparente dos créditos gerados por micro-instalações solares.
+      </p>
+      <p style="margin-top: 0.7rem;">
+        Cada kWh gerado pode ser tokenizado em blockchain, tornando a cotação de carbono mais ágil e aberta.
+        Empresas e cooperativas passam a quantificar e comercializar offsets de forma transparente.
+      </p>
+      <p>
+        <img src="https://images.prismic.io/dashboard-website/32319c0f-abd0-4f28-b372-d381f0f2a125_11.2016-The-Power-of-Solar-Coin.jpg" alt="Regen Network" style="max-height:290px;" />
+      </p>
+    </section>
+
+    <!-- 7. Regen Network -->
+    <section>
+      <span class="label">Regeneração Digital &amp; Neutralidade Carbónica</span>
+      <h2>Rumo à <span class="accent">neutralidade carbónica</span><br>com blockchain</h2>
+      <div style="display:flex; gap:2rem; align-items:flex-start; margin-top:1rem;">
+        <div style="flex:1;">
+          <p>
+            A <strong style="color:#fff">Regen Network</strong> é uma blockchain dedicada a créditos ecológicos verificáveis.
+            Cada crédito representa uma tonelada de CO₂ removida ou evitada — auditável por qualquer pessoa, imutável na cadeia.
+          </p>
+          <p style="margin-top:0.7rem;">
+            Integrar esta infraestrutura na plataforma Thendor permite às organizações parceiras
+            <strong style="color:#fff">medir, compensar e comunicar</strong> o seu impacto ambiental de forma transparente —
+            um passo concreto para cumprir metas de neutralidade carbónica sem depender de intermediários opacos.
+          </p>
+          <div class="highlight-block" style="margin-top:1rem;">
+            <p>
+              <em>ReFi (Regenerative Finance)</em> alinha DeFi com os princípios da economia circular:
+              capital que flui para onde cria impacto social e ambiental real, com verificação on-chain.
+            </p>
+          </div>
+        </div>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:1rem; flex-shrink:0;">
+          <img src="https://cdn.prod.website-files.com/68da2cef7d4bf5865f449b06/68da2cef7d4bf5865f449c45_Regen%20Network%20Logo.webp" alt="Regen Network" style="max-height:70px;" />
+          <img src="https://images.beetleregen.com/cdn-cgi/image/w=2560,q=90/blog-images/carbon-credits-decoded-1.webp" alt="Carbon credits diagram" style="max-height:180px; border-radius:8px;" />
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. CTA — último slide -->
+    <section class="slide-cta">
+      <span class="label" style="text-align:center; display:block;">Fala connosco</span>
+      <h2>Onde as boas ideias<br><span class="accent">encontram quem as concretiza.</span></h2>
+      <p class="sub">
+        Se tens uma ideia, um projeto, uma comunidade<br>ou um desafio que ainda não encontrou quem o resolva —
+      </p>
+      <div class="contacts">
+        <a href="mailto:contact@thendorsement.com">contact@thendorsement.com</a>
+        <a href="tel:+351919022909">+351 919 022 909</a>
+        <a href="https://thendorsement.com" target="_blank">thendorsement.com</a>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Logos fixos no canto inferior direito (visíveis em todos os slides exceto capa) -->
+  <div class="slide-logos" id="slide-logos">
+    <img src="https://enertech.pt/wp-content/uploads/sites/32/2021/10/cropped-enertech-home-slide1-300x300.jpg" alt="Enertech" />
+    <img src="https://portugal2030.pt/wp-content/uploads/sites/3/2022/12/pt2030_cofinanciamento.png" alt="Portugal 2030" />
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+<script>
+  Reveal.initialize({
+    hash: true,
+    transition: 'fade',
+    transitionSpeed: 'fast',
+    controls: true,
+    progress: true,
+    slideNumber: true,
+    keyboard: true,
+    overview: true,
+    center: false,
+  });
+
+  // Esconde o footer de logos no slide de capa (índice 0)
+  function updateLogos() {
+    const logos = document.getElementById('slide-logos');
+    logos.style.display = Reveal.getIndices().h === 0 ? 'none' : 'flex';
+  }
+
+  Reveal.on('ready', updateLogos);
+  Reveal.on('slidechanged', updateLogos);
+
+  // Auto-play a cada 8 segundos, em loop
+  let autoTimer;
+  function startAuto() {
+    clearInterval(autoTimer);
+    autoTimer = setInterval(() => {
+      if (Reveal.isLastSlide()) {
+        Reveal.slide(0);
+      } else {
+        Reveal.next();
+      }
+    }, 8000);
+  }
+  startAuto();
+  Reveal.on('slidechanged', startAuto);
+</script>
+</body>
+</html>
