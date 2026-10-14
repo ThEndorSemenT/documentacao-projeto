@@ -215,6 +215,66 @@
     }
 
     .slide-logos img { max-height: 36px; opacity: 0.85; }
+
+    /* ── Regen slide: layout em 2 colunas ── */
+    .regen-layout {
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+      margin-top: 1rem;
+    }
+
+    .regen-text { flex: 1; }
+
+    .regen-images {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      flex-shrink: 0;
+    }
+
+    .regen-images img:first-child { max-height: 70px; }
+    .regen-images img:last-child  { max-height: 180px; border-radius: 8px; }
+
+    .solcoin-img { max-height: 160px; border-radius: 8px; margin-top: 0.8rem; }
+
+    /* ── Mobile ── */
+    @media (max-width: 768px) {
+      .slide-cover .eyebrow { font-size: 0.85rem; }
+      .slide-cover h1 { font-size: 2.8rem !important; }
+      .slide-cover .tagline { font-size: 1.15rem; }
+
+      .reveal h2 { font-size: 1.7rem !important; }
+      .reveal p  { font-size: 1rem; line-height: 1.7; }
+
+      .label { font-size: 0.75rem; }
+
+      .project-grid { grid-template-columns: 1fr; gap: 0.7rem; }
+
+      .card { padding: 0.9rem 1.1rem; }
+      .card strong { font-size: 1.05rem; }
+      .card p { font-size: 0.9rem !important; line-height: 1.6; }
+      .card .price { font-size: 0.9rem !important; }
+
+      .highlight-block p { font-size: 0.95rem !important; }
+
+      .regen-layout  { flex-direction: column; gap: 1rem; }
+      .regen-images  { flex-direction: row; justify-content: center; width: 100%; }
+      .regen-images img:last-child { max-height: 130px; }
+
+      .solcoin-img   { max-height: 110px; }
+
+      .slide-cta h2  { font-size: 1.7rem !important; }
+      .slide-cta .sub { font-size: 1rem; }
+      .contacts a   { font-size: 0.85rem; padding: 0.4rem 0.9rem; }
+
+      .slide-logos      { bottom: 8px; right: 12px; gap: 6px; }
+      .slide-logos img  { max-height: 24px; }
+
+      .cover-logos      { margin-top: 1.5rem; }
+      .cover-logos img  { max-height: 36px; }
+    }
   </style>
 </head>
 <body>
@@ -342,17 +402,15 @@
         Cada kWh gerado pode ser tokenizado em blockchain, tornando a cotação de carbono mais ágil e aberta.
         Empresas e cooperativas passam a quantificar e comercializar offsets de forma transparente.
       </p>
-      <p>
-        <img src="https://images.prismic.io/dashboard-website/32319c0f-abd0-4f28-b372-d381f0f2a125_11.2016-The-Power-of-Solar-Coin.jpg" alt="Regen Network" style="max-height:290px;" />
-      </p>
+      <img class="solcoin-img" src="https://images.prismic.io/dashboard-website/32319c0f-abd0-4f28-b372-d381f0f2a125_11.2016-The-Power-of-Solar-Coin.jpg" alt="SolarCoin" />
     </section>
 
     <!-- 7. Regen Network -->
     <section>
       <span class="label">Regeneração Digital &amp; Neutralidade Carbónica</span>
       <h2>Rumo à <span class="accent">neutralidade carbónica</span><br>com blockchain</h2>
-      <div style="display:flex; gap:2rem; align-items:flex-start; margin-top:1rem;">
-        <div style="flex:1;">
+      <div class="regen-layout">
+        <div class="regen-text">
           <p>
             A <strong style="color:#fff">Regen Network</strong> é uma blockchain dedicada a créditos ecológicos verificáveis.
             Cada crédito representa uma tonelada de CO₂ removida ou evitada — auditável por qualquer pessoa, imutável na cadeia.
@@ -369,9 +427,9 @@
             </p>
           </div>
         </div>
-        <div style="display:flex; flex-direction:column; align-items:center; gap:1rem; flex-shrink:0;">
-          <img src="https://cdn.prod.website-files.com/68da2cef7d4bf5865f449b06/68da2cef7d4bf5865f449c45_Regen%20Network%20Logo.webp" alt="Regen Network" style="max-height:70px;" />
-          <img src="https://images.beetleregen.com/cdn-cgi/image/w=2560,q=90/blog-images/carbon-credits-decoded-1.webp" alt="Carbon credits diagram" style="max-height:180px; border-radius:8px;" />
+        <div class="regen-images">
+          <img src="https://cdn.prod.website-files.com/68da2cef7d4bf5865f449b06/68da2cef7d4bf5865f449c45_Regen%20Network%20Logo.webp" alt="Regen Network" />
+          <img src="https://images.beetleregen.com/cdn-cgi/image/w=2560,q=90/blog-images/carbon-credits-decoded-1.webp" alt="Carbon credits diagram" />
         </div>
       </div>
     </section>
@@ -411,6 +469,12 @@
     keyboard: true,
     overview: true,
     center: false,
+    width: 960,
+    height: 840,
+    margin: 0.04,
+    minScale: 0.2,
+    maxScale: 1.5,
+    touch: true,
   });
 
   // Esconde o footer de logos no slide de capa (índice 0)
